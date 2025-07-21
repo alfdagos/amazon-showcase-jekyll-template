@@ -1,0 +1,54 @@
+<!-- Header -->
+<header class="bg-white shadow-sm">
+    <div class="container mx-auto px-4 py-6">
+        <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <i class="{{ site.logo_icon }} text-amber-500 text-3xl mr-3"></i>
+                <h1 class="text-2xl font-bold text-gray-800">{{ site.logo_text }}</h1>
+            </div>
+            
+            <!-- Desktop Search -->
+            <div class="hidden md:block">
+                <div class="relative">
+                    <input type="text" placeholder="Cerca prodotti..." class="w-64 px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="search-input">
+                    <button class="absolute right-0 top-0 mt-2 mr-3 text-gray-500" id="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6">
+                {% for nav_item in site.navigation %}
+                <a href="{{ nav_item.url }}" class="text-gray-600 hover:text-amber-500 transition duration-300">{{ nav_item.name }}</a>
+                {% endfor %}
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-600 focus:outline-none" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation (hidden by default) -->
+        <nav class="md:hidden mt-4 hidden" id="mobile-navigation">
+            <div class="flex flex-col space-y-2">
+                {% for nav_item in site.navigation %}
+                <a href="{{ nav_item.url }}" class="text-gray-600 hover:text-amber-500 py-2 transition duration-300">{{ nav_item.name }}</a>
+                {% endfor %}
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Mobile Search (visible only on mobile) -->
+<div class="md:hidden bg-white px-4 py-3 shadow-sm">
+    <div class="relative">
+        <input type="text" placeholder="Cerca prodotti..." class="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="mobile-search-input">
+        <button class="absolute right-0 top-0 mt-2 mr-3 text-gray-500" id="mobile-search-button">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+</div>
+

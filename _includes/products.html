@@ -1,0 +1,88 @@
+<!-- Products Section -->
+<section id="products" class="py-12">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Prodotti in Evidenza</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {% for product in site.data.products %}
+            <!-- Product {{ product.id }} -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg" data-category="{{ product.category }}">
+                <div class="relative">
+                    <!-- Product Image Placeholder -->
+                    <div class="h-64 bg-gray-200 flex items-center justify-center">
+                        {% if product.image %}
+                        <img src="{{ product.image | relative_url }}" alt="{{ product.name }}" class="w-full h-full object-cover">
+                        {% else %}
+                        <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
+                        </svg>
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Badge -->
+                    {% if product.badge %}
+                    <div class="absolute top-2 right-2 bg-{{ product.badge.color }}-500 text-white text-xs font-bold px-2 py-1 rounded">
+                        {{ product.badge.text }}
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="p-4">
+                    <!-- Rating -->
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-amber-400">
+                            {% assign full_stars = product.rating | floor %}
+                            {% assign half_star = product.rating | minus: full_stars %}
+                            
+                            {% for i in (1..full_stars) %}
+                            <i class="fas fa-star"></i>
+                            {% endfor %}
+                            
+                            {% if half_star >= 0.5 %}
+                            <i class="fas fa-star-half-alt"></i>
+                            {% endif %}
+                            
+                            {% assign empty_stars = 5 | minus: full_stars %}
+                            {% if half_star >= 0.5 %}
+                                {% assign empty_stars = empty_stars | minus: 1 %}
+                            {% endif %}
+                            
+                            {% for i in (1..empty_stars) %}
+                            <i class="far fa-star"></i>
+                            {% endfor %}
+                        </div>
+                        <span class="text-gray-500 text-sm ml-2">{{ product.rating }} ({{ product.reviews }})</span>
+                    </div>
+                    
+                    <!-- Product Info -->
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ product.name }}</h3>
+                    <p class="text-gray-600 text-sm mb-4">{{ product.description }}</p>
+                    
+                    <!-- Price and CTA -->
+                    <div class="flex justify-between items-center">
+                        <div>
+                            {% if product.original_price %}
+                            <span class="text-gray-400 line-through text-sm">€{{ product.original_price }}</span>
+                            <span class="text-xl font-bold text-gray-800 ml-2">€{{ product.current_price }}</span>
+                            {% else %}
+                            <span class="text-xl font-bold text-gray-800">€{{ product.current_price }}</span>
+                            {% endif %}
+                        </div>
+                        <a href="{{ product.amazon_link }}" class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300" target="_blank" rel="noopener">
+                            Vedi su Amazon
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12">
+            <button id="loadMore" class="bg-white border border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-white px-6 py-3 rounded-full font-medium transition duration-300">
+                Carica Altri Prodotti
+            </button>
+        </div>
+    </div>
+</section>
+

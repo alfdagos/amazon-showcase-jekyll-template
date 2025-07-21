@@ -1,0 +1,101 @@
+# Site settings
+title: "AffiliateShowcase"
+description: "La tua guida per i migliori prodotti disponibili su Amazon, selezionati con cura per qualità e convenienza."
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+# Site branding
+logo_icon: "fas fa-shopping-cart"
+logo_text: "AffiliateShowcase"
+
+# Navigation menu
+navigation:
+  - name: "Home"
+    url: "/"
+  - name: "Categorie"
+    url: "#categories"
+  - name: "Offerte"
+    url: "#products"
+  - name: "Chi Siamo"
+    url: "/about"
+
+# Hero section
+hero:
+  title: "I Migliori Prodotti Selezionati Per Te"
+  subtitle: "Scopri la nostra selezione di prodotti di qualità a prezzi competitivi, tutti disponibili su Amazon."
+  cta_text: "Esplora Prodotti"
+  cta_link: "#products"
+
+# Newsletter
+newsletter:
+  title: "Resta Aggiornato"
+  description: "Iscriviti alla nostra newsletter per ricevere in anteprima le migliori offerte e i nuovi prodotti disponibili."
+  placeholder: "Il tuo indirizzo email"
+  button_text: "Iscriviti"
+
+# Footer
+footer:
+  description: "La tua guida per i migliori prodotti disponibili su Amazon, selezionati con cura per qualità e convenienza."
+  copyright: "© 2023 AffiliateShowcase. Tutti i diritti riservati."
+  disclaimer: "AffiliateShowcase partecipa al Programma Affiliazione Amazon EU, un programma di affiliazione che consente ai siti di percepire una commissione pubblicitaria pubblicizzando e fornendo link al sito Amazon.it"
+  
+  # Footer links
+  categories_links:
+    - name: "Tecnologia"
+      url: "#"
+    - name: "Casa e Cucina"
+      url: "#"
+    - name: "Bellezza"
+      url: "#"
+    - name: "Sport"
+      url: "#"
+    - name: "Libri"
+      url: "#"
+  
+  useful_links:
+    - name: "Chi Siamo"
+      url: "#"
+    - name: "Contatti"
+      url: "#"
+    - name: "Privacy Policy"
+      url: "#"
+    - name: "Termini e Condizioni"
+      url: "#"
+    - name: "Disclaimer Affiliazione"
+      url: "#"
+  
+  social_links:
+    - name: "Facebook"
+      url: "#"
+      icon: "fab fa-facebook"
+    - name: "Instagram"
+      url: "#"
+      icon: "fab fa-instagram"
+    - name: "Twitter"
+      url: "#"
+      icon: "fab fa-twitter"
+    - name: "Pinterest"
+      url: "#"
+      icon: "fab fa-pinterest"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+

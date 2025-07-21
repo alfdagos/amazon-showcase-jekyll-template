@@ -1,0 +1,105 @@
+- id: 1
+  name: "Smartphone XYZ Pro"
+  description: "Display AMOLED 6.5\", 8GB RAM, 128GB, Fotocamera 108MP"
+  category: "tech"
+  rating: 4.5
+  reviews: 120
+  original_price: 599.99
+  current_price: 479.99
+  discount: 20
+  badge:
+    type: "discount"
+    text: "-20%"
+    color: "amber"
+  amazon_link: "#"
+  image: "/assets/images/products/smartphone-xyz-pro.jpg"
+
+- id: 2
+  name: "Robot Aspirapolvere Smart"
+  description: "Navigazione laser, controllo app, 150 min autonomia"
+  category: "home"
+  rating: 5.0
+  reviews: 89
+  current_price: 249.99
+  badge:
+    type: "bestseller"
+    text: "Bestseller"
+    color: "green"
+  amazon_link: "#"
+  image: "/assets/images/products/robot-aspirapolvere.jpg"
+
+- id: 3
+  name: "Set Skincare Premium"
+  description: "Crema idratante, siero viso e contorno occhi anti-età"
+  category: "beauty"
+  rating: 4.0
+  reviews: 56
+  current_price: 79.99
+  amazon_link: "#"
+  image: "/assets/images/products/set-skincare.jpg"
+
+- id: 4
+  name: "Smartwatch Fitness Pro"
+  description: "GPS, cardiofrequenzimetro, 14 giorni di autonomia"
+  category: "sport"
+  rating: 4.7
+  reviews: 203
+  original_price: 199.99
+  current_price: 169.99
+  discount: 15
+  badge:
+    type: "discount"
+    text: "-15%"
+    color: "amber"
+  amazon_link: "#"
+  image: "/assets/images/products/smartwatch-fitness.jpg"
+
+- id: 5
+  name: "Il Potere delle Abitudini"
+  description: "Bestseller internazionale sulla psicologia del cambiamento"
+  category: "books"
+  rating: 4.9
+  reviews: 78
+  current_price: 19.90
+  amazon_link: "#"
+  image: "/assets/images/products/libro-abitudini.jpg"
+
+- id: 6
+  name: "Cuffie Bluetooth Noise Cancelling"
+  description: "30 ore di autonomia, cancellazione attiva del rumore"
+  category: "tech"
+  rating: 4.2
+  reviews: 45
+  original_price: 149.99
+  current_price: 99.99
+  badge:
+    type: "offer"
+    text: "Offerta"
+    color: "red"
+  amazon_link: "#"
+  image: "/assets/images/products/cuffie-bluetooth.jpg"
+
+- id: 7
+  name: "Macchina per Caffè Espresso"
+  description: "19 bar, compatibile con cialde e caffè macinato"
+  category: "home"
+  rating: 3.5
+  reviews: 32
+  current_price: 129.99
+  amazon_link: "#"
+  image: "/assets/images/products/macchina-caffe.jpg"
+
+- id: 8
+  name: "Tapis Roulant Pieghevole"
+  description: "12 programmi, inclinazione automatica, display LCD"
+  category: "sport"
+  rating: 4.6
+  reviews: 87
+  current_price: 349.99
+  badge:
+    type: "new"
+    text: "Novità"
+    color: "blue"
+  amazon_link: "#"
+  image: "/assets/images/products/tapis-roulant.jpg"
+

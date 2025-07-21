@@ -1,0 +1,16 @@
+<!-- Newsletter Section -->
+<section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">{{ site.newsletter.title }}</h2>
+        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">{{ site.newsletter.description }}</p>
+        <div class="max-w-md mx-auto">
+            <form class="flex" id="newsletter-form">
+                <input type="email" placeholder="{{ site.newsletter.placeholder }}" class="flex-grow px-4 py-3 rounded-l-lg border-t border-b border-l border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="newsletter-email" required>
+                <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-r-lg font-medium transition duration-300">
+                    {{ site.newsletter.button_text }}
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,24 @@
+- id: "all"
+  name: "Tutti"
+  active: true
+
+- id: "tech"
+  name: "Tecnologia"
+  active: false
+
+- id: "home"
+  name: "Casa e Cucina"
+  active: false
+
+- id: "beauty"
+  name: "Bellezza"
+  active: false
+
+- id: "sport"
+  name: "Sport"
+  active: false
+
+- id: "books"
+  name: "Libri"
+  active: false
+
